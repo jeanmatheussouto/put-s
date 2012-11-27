@@ -1,0 +1,37 @@
+<h3>Minhas Compras</h3>
+
+<table class="table table-bordered table-striped datatable">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th></th>
+    </tr>  
+  </thead>
+  
+  <tbody>
+    <% @compras.each do |compra| %>
+    <tr>
+      <td><%= link_to compra.nome, compra_produtos_path(compra) %></td>
+      <td style="text-align:center">
+        <a href="#<%= compra.class %><%= compra.id %>" data-toggle="modal">Detalhes</a>
+        <%= link_to 'Editar', edit_compra_path(compra), :class => "btn btn-link"%>
+        <%= link_to 'Excluir', compra, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-link"%>
+        <a href="#check_<%= compra.nome %>" data-toggle="modal" class="btn btn-link">Check List</a>
+        <%= link_to "Convidar", compra_convidar_path(compra), method: :post, :class => "btn btn-link"%>
+        </td>
+    </tr>
+    
+    <!-- chamando o modal -->
+    <%= modal_show_compra(compra) %>
+    
+    <%= check_list(compra) %>
+    
+    <% end %>  
+    
+  </tbody>
+  
+</table>
+
+<div class="clear"></div>
+<br><br>
+<%= link_to 'Nova Compra', new_compra_path, :class => "btn pull-right" %>

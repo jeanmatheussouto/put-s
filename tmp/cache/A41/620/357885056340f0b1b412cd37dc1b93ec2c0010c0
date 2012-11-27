@@ -1,0 +1,5 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1353718776.593713:@value"W[I"KjQuery(document).ready(function() {
+	$('.typeahead').typeahead()
+});
+
+:EF

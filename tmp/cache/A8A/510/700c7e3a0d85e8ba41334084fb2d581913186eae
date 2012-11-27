@@ -1,0 +1,7 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1353724424.3978243:@value"‘[I"„jQuery(document).ready(function() {
+	//$('.typeahead').typeahead();
+
+	$('.field_with_errors').addClass('control-group error');
+});
+
+:EF

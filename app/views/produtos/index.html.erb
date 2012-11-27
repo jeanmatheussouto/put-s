@@ -1,0 +1,43 @@
+<h3>Produtos da compra : <%= @compra.nome%></h3>
+
+<table class="table table-bordered table-striped datatable">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Quantidade</th>
+      <th>Comprado?</th>
+      <th></th>
+    </tr>
+
+  </thead>
+  
+  <tbody>
+    <% @produtos.each do |produto| %>
+    <tr>
+      <td><%= produto.nome %></td>
+      <td><%= produto.quantidade %></td>
+      <td>
+        <% if produto.status %>
+        Comprado
+        <% else %>
+        Não Comprado
+        <% end %>
+      </td>
+      <td>
+        <a href="#<%= produto.class %><%= produto.id%>" data-toggle="modal">Detalhes</a>
+        <%= link_to 'Editar', edit_compra_produto_path(@compra,produto), :class => "btn btn-link"%>
+        <%= link_to 'Excluir', compra_produto_path(@compra, produto), method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-link"%>
+      </td>
+    </tr>
+
+    <!-- chamando o modal -->
+    <%= modal_show_compra(produto) %>
+
+    <% end %>
+  </tbody>
+</table>
+
+<div class="clear"></div>
+<br><br>
+
+<%= link_to 'Adicionar Produto', new_compra_produto_path(@compra,@produto), :class => "btn pull-right" %>

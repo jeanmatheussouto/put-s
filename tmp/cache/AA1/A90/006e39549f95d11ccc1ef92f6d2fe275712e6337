@@ -1,0 +1,24 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1353857754.1848538:@value"[I"øjQuery(document).ready(function() {
+	//$('.typeahead').typeahead();
+
+	//add class para os fields com erros
+	$('.field_with_errors').addClass('control-group error');
+
+
+	//add class para o notice de sucesso
+	$("#notice").addClass('alert alert-success');
+
+	$("img[rel]").overlay();
+
+	$('.typeahead').typeahead();
+
+	$('.datatable').dataTable({
+		"sDom": "<'row'<'span6'l><'span6'f>r>t<'row'<'span6'i><'span6'p>>",
+		"sPaginationType": "bootstrap",
+		"oSearch": {
+			"sSearch": "Initial search"
+		}
+	});
+});
+
+:EF

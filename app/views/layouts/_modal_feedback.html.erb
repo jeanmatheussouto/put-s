@@ -1,0 +1,34 @@
+<div id="feedback" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="padding-right:15px;">
+ <div class="modal-header">
+  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+  <h3 id="myModalLabel">Mande seu feedback sobre o put'S</h3>
+</div>
+<div class="modal-body" method="post">
+  
+  <form>
+
+    <div style="margin:0;padding:0;display:inline">
+      <input name="authenticity_token" type="hidden" value="NrOp5bsjoLRuK8IW5+dQEYjKGUJDe7TQoZVvq95Wteg=" />
+    </div>
+    
+    <fieldset>
+      <label>Nome</label>
+      <input type="text" placeholder="Exemplo de nome" class="input-xxlarge" name="nome">
+
+      <label>Email</label>
+      <input type="email" placeholder="exemplo@email.com" class="input-xxlarge" name="email">
+
+      <label>Mensagem</label>
+      <textarea rows="10" class="input-xxlarge" name="mensagem">
+
+      </textarea>
+
+    </fieldset>
+  </form>
+</div>
+
+<div class="modal-footer" style="margin:0 0 10px 15px;">
+  <button class="btn">Mande seu feedback</button>
+  <button class="btn" data-dismiss="modal" aria-hidden="true">Cancelar</button>
+</div>
+</div>
