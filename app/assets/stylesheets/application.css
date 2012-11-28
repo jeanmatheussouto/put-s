@@ -12,6 +12,12 @@
  *= require dataTables/jquery.dataTables.bootstrap
  *= require_tree .
  */
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
  /*FONTES*/
  @font-face {
     font-family: 'ubuntubold';

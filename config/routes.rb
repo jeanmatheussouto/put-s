@@ -7,6 +7,8 @@ Puts::Application.routes.draw do
 
   devise_for :users
 
+  post 'home/enviar_feedback'
+
   resources :compras do
     resources :produtos
     post 'convidar'

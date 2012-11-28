@@ -1,9 +1,9 @@
 <hr>
 	
 <h3>Listas de Compras</h3>
-<ul>
+<ul class="lista_compras">
 	<% ultimas_compras.each do |compra| %>
-	<li><%= link_to compra.nome , compra_produtos_path(compra) %></li>
+	<li><i class="icon-shopping-cart"></i><%= link_to compra.nome , compra_produtos_path(compra) %></li>
 	<%end%>
 </ul>
 

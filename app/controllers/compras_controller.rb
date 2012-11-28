@@ -10,12 +10,14 @@ class ComprasController < ApplicationController
   def convidar
     @compra = Compra.find(params[:compra_id])
 
-    if params[:user_id]
-      user_id = params[:user_id]
+    if params[:user_select]
+      user_select = params[:user_select]
 
-      @compra.users << User.find(user_id)
+      user = User.find_by_nome(user_select)
 
-      redirect_to compra_produtos_path(@compra), notice: "#{User.find(user_id).nome} adicionado a sua lista de compras com sucesso!!"
+      @compra.users << user
+
+      redirect_to compra_produtos_path(@compra), notice: "#{user.nome} adicionado a sua lista de compras com sucesso!!"
     end
   end
 

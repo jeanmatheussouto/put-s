@@ -1,4 +1,4 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1354102266.0114582:@value"ê[I"ÜjQuery(document).ready(function() {
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1354134595.926128:@value"ê[I"ÜjQuery(document).ready(function() {
 	//$('.typeahead').typeahead();
 
 	//add class para os fields com erros

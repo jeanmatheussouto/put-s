@@ -1,26 +1,20 @@
-<h3>Adicionar participantes para lista de compras</h3>
+<div class="span6">
+	
+	<h3>Adicionar participantes para lista de compras</h3>
 
-<%= form_tag :controller => 'compras', :action => 'convidar' do %>
+	<%= form_tag :controller => 'compras', :action => 'convidar' do %>
 
-<div class="control-group">
-	<label class="control-label" for="nome">Nome do Convidado</label>
-	<div class="controls">
-		<!--<input type="text" name="[user_id]" id="user_id" />-->
+	<div class="control-group">
+		<label class="control-label" for="nome">Procure pelo nome de seu convidado</label>
+		<div class="controls">
+			<!--<input type="text" name="[user_id]" id="user_id" />-->
+			<input type="text" data-provide="typeahead" data-source='<%= getsource %>' name="[user_select]" id="select_user" class="input-xxlarge">
+		</div>
 
-		<select name="[user_id]" value="Selecione">
-			<% User.all.each do |u| %>
-				<% if current_user != u %>
-					<option value="<%= u.id %>"><%= u.nome %></option>
-				<% end %>
-			<% end %>
-		</select>
+		<div class="controls">
+			<input type="submit" value="Enviar" class="btn btn-success btn-large pull-right" style="margin: 10px 23px 0 0;">
+		</div>
 	</div>
-</div>
 
-<div class="control-group">
-	<div class="controls">
-		<input type="submit" value="Enviar" class="btn btn-success">
-	</div>
+	<% end %>
 </div>
-
-<% end %>

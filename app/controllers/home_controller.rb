@@ -7,10 +7,12 @@ class HomeController < ApplicationController
 
 	def enviar_feedback
 
-		nome = Home.find(params[:nome])
-		email = Home.find(params[:email])
-		msg = Home.find(params[:mensagem])
+		nome = params[:nome]
+		email = params[:email]
+		msg = params[:mensagem]
 
 		FeedbackMailer.feedback(nome,email,msg).deliver
+
+		redirect_to root_path
 	end
 end

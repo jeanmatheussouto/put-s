@@ -1,0 +1,87 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1354136836.9099965:@value"a[I"S/* line 7, ../../app/assets/stylesheets/home.css.scss */
+.topo {
+  height: 384px;
+  margin: 60px 0 100px 0;
+  background: #232323;
+}
+
+/* line 12, ../../app/assets/stylesheets/home.css.scss */
+#header_puts {
+  margin-top: 100px;
+  margin-right: 115px;
+  padding-left: 70px;
+}
+/* line 16, ../../app/assets/stylesheets/home.css.scss */
+#header_puts h1 {
+  color: #FFF;
+  text-align: center;
+  padding-bottom: 40px;
+  font-size: 40px;
+  font-family: 'ubuntubold';
+}
+/* line 23, ../../app/assets/stylesheets/home.css.scss */
+#header_puts a {
+  display: block;
+  height: 40px;
+  background: #BF1B39;
+  text-transform: uppercase;
+  font-family: 'ubuntubold';
+  padding-top: 30px;
+  -webkit-transition: all .5s linear;
+  -moz-transition: all .5s linear;
+  -ms-transition: all .5s linear;
+  -o-transition: all .5s linear;
+  transition: all .5s linear;
+}
+/* line 37, ../../app/assets/stylesheets/home.css.scss */
+#header_puts a:hover {
+  background: #FFF;
+  color: #000;
+}
+
+/* line 42, ../../app/assets/stylesheets/home.css.scss */
+#header_puts_imgs {
+  margin-top: 80px;
+}
+
+/* line 46, ../../app/assets/stylesheets/home.css.scss */
+#box_puts div {
+  margin-bottom: 50px;
+  text-align: center;
+}
+/* line 49, ../../app/assets/stylesheets/home.css.scss */
+#box_puts div h2 {
+  padding-bottom: 20px;
+}
+
+/* line 54, ../../app/assets/stylesheets/home.css.scss */
+.meio {
+  height: 150px;
+  margin: 20px 0 20px 0;
+}
+
+/* line 59, ../../app/assets/stylesheets/home.css.scss */
+#get_app a {
+  width: 120%;
+  height: 30px;
+  padding-top: 15px;
+  margin-left: -15%;
+  background: #a4ca39;
+  font-size: 18px;
+}
+
+/* line 68, ../../app/assets/stylesheets/home.css.scss */
+footer {
+  background: #232323;
+}
+/* line 70, ../../app/assets/stylesheets/home.css.scss */
+footer a {
+  color: #FFF;
+}
+
+/* line 75, ../../app/assets/stylesheets/home.css.scss */
+.input_large {
+  height: 40px;
+  width: 100%;
+}
+:EF

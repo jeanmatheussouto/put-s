@@ -64,4 +64,12 @@ module ApplicationHelper
 
 		raw modal
 	end
+
+	def getsource
+    	array = []
+    	User.all.each do |u|
+    		array << u.nome 
+    	end
+    	return array.to_json
+  	end
 end

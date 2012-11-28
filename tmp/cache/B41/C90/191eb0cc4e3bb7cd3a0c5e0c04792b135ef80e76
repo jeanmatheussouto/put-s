@@ -1,4 +1,4 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1353980595.4937308:@value"ö[I"è/* line 7, ../../app/assets/stylesheets/home.css.scss */
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1354136898.595818:@value"ö[I"è/* line 7, ../../app/assets/stylesheets/home.css.scss */
 .topo {
   height: 384px;
   margin: 60px 0 100px 0;
