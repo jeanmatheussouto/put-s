@@ -16,7 +16,7 @@ module ApplicationHelper
 		raw erros  
 	end
 
-	#Helper para busca as ultimas 5 compras
+	#Helper para busca as ultimas 10 compras
 	#para alimentar a sidebar
 	def ultimas_compras
 		return current_user.compras.limit(10).order("created_at DESC")

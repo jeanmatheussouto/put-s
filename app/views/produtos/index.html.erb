@@ -1,4 +1,7 @@
-<h3>Produtos da compra : <%= @compra.nome%></h3>
+<h3>Produtos da compra : <span class="span_red"><%= @compra.nome%></span></h3>
+<h5>Responsável: <span class="span_red"><%= @compra.users.first.nome %></span></h5>
+
+<div class="clear"></div>
 
 <table class="table table-bordered table-striped datatable">
   <thead>
@@ -38,6 +41,33 @@
 </table>
 
 <div class="clear"></div>
-<br><br>
+<br/>
 
-<%= link_to 'Adicionar Produto', new_compra_produto_path(@compra,@produto), :class => "btn pull-right" %>
+<%= link_to 'Adicionar Produto', new_compra_produto_path(@compra,@produto), :class => "btn btn-sucess pull-right" %>
+
+<div class="clear"></div>
+
+<br/>
+<hr>
+<table class="table table-bordered table-striped datatable">
+  <caption>Participantes da lista de compras</caption>
+  <thead>
+    <tr>
+      <th>Nome do participante</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @compra.users.each do |user| %>
+      <tr>
+          <td><%= user.nome %></td>
+          <!-- <td><a href="" title="" class="btn btn-link">Remover da lista</a></td> -->
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<div class="clear"></div>
+
+<%= link_to "Convidar para minha lista", compra_convidar_path(@compra), method: :post, :class => "btn btn-success"%>
+
+

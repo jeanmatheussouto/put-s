@@ -32,7 +32,7 @@
               <%= link_to "put'S", root_path, :class => "brand" %>
               <div class="nav-collapse collapse">
                 <ul class="nav">
-                  <li><%= link_to "Meu put'S", compras_path %></li>
+                  <li><%= link_to "Minhas listas de compras", compras_path %></li>
                 </ul>
                 <ul class="nav pull-right">
                  <li><a><%= current_user.nome %></a></li>
@@ -96,21 +96,28 @@
         </div>
         
         <div class="span8">
+          <hr>
           <!-- CONtEUDO -->
+          <% if notice %>
+          <p class="notice alert alert-success">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+            <%= notice %>
+          </p>
+          <% end %>
           
-          <% if flash[:notice] %>
-            <p class="notice"><%= flash[:notice] %></p>
+          <% if alert %>
+          <button type="button" class="close" data-dismiss="alert">×</button>
+          <p class="alert alert alert-error">
+            <%= alert %>
+          </p>
           <% end %>
-          <% if flash[:error] %>
-            <p class="error"><%= flash[:error] %></p>
-          <% end %>
-
-
+          
           <%= yield %>
+          
         </div>
         <% else %>
         
-        <div class="span12">
+        <div class="span12" id="conteudo">
           <!-- CONtEUDO -->
           <%= yield %>
         </div>
@@ -127,6 +134,20 @@
         <h3>put'S - Desenvolvido por <a href="http://about.me/jeanmatheus" target="_blanck" >Jean Matheus Souto</a></h3>
       </div>
     </footer>
+    
+    <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36635985-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+    </script>
 
   </body>
   </html>

@@ -13,7 +13,24 @@ jQuery(document).ready(function() {
 	$('.typeahead').typeahead();
 
 	$('.datatable').dataTable({
-		"sPaginationType": "bootstrap"
+		"sPaginationType": "bootstrap",
+
+    	"bLengthChange" : false,
+
+    	"iDisplayLength" : 7,
+
+	    "oLanguage": {
+
+	        "sInfo": "Mostrando registros de _START_ a _END_ de um total de _TOTAL_",
+	        "sInfoEmpty": "Nenhum registro para exibir",
+
+	        "sSearch" : "Pesquisar",
+
+	        "sInfoFiltered" : "",
+
+	        "sZeroRecords": "Nenhum registro cadastrado"
+	    }
 	});
+
 });
 

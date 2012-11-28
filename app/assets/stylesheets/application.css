@@ -53,6 +53,12 @@
     font-weight: normal;
     font-style: normal;
 }
+.clear{
+    clear: both;
+}
+#conteudo{
+    margin-bottom: 50px;
+}
 .well{
     width: 300px;
     margin:0 auto;

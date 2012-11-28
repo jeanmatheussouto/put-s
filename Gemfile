@@ -28,12 +28,12 @@ end
 
 
 group :development do
-	gem 'mysql2'
-  #gem 'sqlite3'
+	#gem 'mysql2'
+  gem 'sqlite3'
 end
 
 
 group :production do
-	gem 'pg'
+	#gem 'pg'
 	gem 'thin'
 end

@@ -1,0 +1,6 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1354101753.754263:@value"}[I"q/* line 1, ../../app/assets/stylesheets/produtos.css.scss */
+.span_red {
+  float: none;
+  color: #BF1B39;
+}
+:EF

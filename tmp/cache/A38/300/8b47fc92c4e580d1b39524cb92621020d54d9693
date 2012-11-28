@@ -1,0 +1,5 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1354101503.5327911:@value"p[I"d/* line 4, ../../app/assets/stylesheets/produtos.css.scss */
+h3 span, h4 {
+  color: #BF1B39;
+}
+:EF

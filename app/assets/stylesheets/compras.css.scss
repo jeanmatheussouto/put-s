@@ -1,38 +1,32 @@
-// Place all the styles related to the compras controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
 #eng_content{
 	min-height:730px;
 }
 .content_tab2 {
-	min-height:500px;
-	padding: 10px 0 10px 70px;
-	border:1px solid #ededed;
-	vertical-align: bottom;
-	background-color: #fff; 
-
-	background-image: 
-	-webkit-linear-gradient(90deg, transparent 49px, #e5eef6 49px, #e5eef6 50px, transparent 50px),
-	-webkit-radial-gradient(circle, #f5f5f5 14px, transparent 14px),
-	-webkit-radial-gradient(circle, rgba(0,0,0,.2) 15px, transparent 15px);
-	-webkit-background-size: auto 50px, 50px 50px, 50px 50px;
-	background-image: 
-	-moz-linear-gradient(90deg, transparent 49px, #e5eef6 49px, #e5eef6 50px, transparent 50px),
-	-moz-radial-gradient(circle, #f5f5f5 14px, transparent 14px),
-	-moz-radial-gradient(circle, rgba(0,0,0,.2) 15px, transparent 15px);
-	-moz-background-size: auto 50px, 50px 50px, 50px 50px;
-	background-image: 
-	linear-gradient(90deg, transparent 49px, #e5eef6 49px, #e5eef6 50px, transparent 50px),
-	radial-gradient(circle, #f5f5f5 14px, transparent 14px),
-	radial-gradient(circle, rgba(0,0,0,.2) 15px, transparent 15px);
-	background-size: auto 50px, 50px 50px, 50px 50px;
-	background-repeat: repeat, repeat-y, repeat-y;
-	background-position: 0 -1px, 1px 1px;
-	box-shadow: 2px 2px 1px -1px rgba(0,0,0,.2);
-	resize: none;
-	h4{
-		padding-bottom:30px;
-	}
+  padding: 10px 20px 10px 70px;
+  border:1px solid #ededed;
+  font-size: 25px;
+  line-height: 50px;
+  vertical-align: bottom;
+  background-color: #fff; 
+  background-image: 
+  -webkit-linear-gradient(90deg, transparent 49px, #e5eef6 49px, #e5eef6 50px, transparent 50px),
+  -webkit-radial-gradient(circle, #f5f5f5 14px, transparent 14px),
+  -webkit-radial-gradient(circle, rgba(0,0,0,.2) 15px, transparent 15px);
+  -webkit-background-size: auto 50px, 50px 50px, 50px 50px;
+  background-image: 
+  -moz-linear-gradient(90deg, transparent 49px, #e5eef6 49px, #e5eef6 50px, transparent 50px),
+  -moz-radial-gradient(circle, #f5f5f5 14px, transparent 14px),
+  -moz-radial-gradient(circle, rgba(0,0,0,.2) 15px, transparent 15px);
+  -moz-background-size: auto 50px, 50px 50px, 50px 50px;
+  background-image: 
+  linear-gradient(90deg, transparent 49px, #e5eef6 49px, #e5eef6 50px, transparent 50px),
+  radial-gradient(circle, #f5f5f5 14px, transparent 14px),
+  radial-gradient(circle, rgba(0,0,0,.2) 15px, transparent 15px);
+  background-size: auto 50px, 50px 50px, 50px 50px;
+  background-repeat: repeat, repeat-y, repeat-y;
+  background-position: 0 -1px, 1px 1px;
+  box-shadow: 2px 2px 1px -1px rgba(0,0,0,.2);
+  resize: none; 
 }
 .checklist {
 	overflow:auto;

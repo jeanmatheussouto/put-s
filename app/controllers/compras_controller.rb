@@ -6,7 +6,7 @@ class ComprasController < ApplicationController
 
   before_filter :find_compra, :only => [:show, :edit, :update, :destroy]
 
-
+  #Action  que realiza o convite de particiapntes
   def convidar
     @compra = Compra.find(params[:compra_id])
 
@@ -15,10 +15,22 @@ class ComprasController < ApplicationController
 
       @compra.users << User.find(user_id)
 
-      redirect_to compra_produtos_path(@compra), notice: "#{User.find(user_id).nome} convidado com sucesso!!"
+      redirect_to compra_produtos_path(@compra), notice: "#{User.find(user_id).nome} adicionado a sua lista de compras com sucesso!!"
     end
-
   end
+
+  # #Action  que excluir o participante da lista
+  # def remove_participante
+  #   @compra = Compra.find(params[:compra_id])
+
+  #   if params[:user_id]
+  #     user_id = params[:user_id]
+
+  #     @compra.users.destroy(user_id)
+
+  #     redirect_to compra_produtos_path(@compra), notice: "Participante removido da sua lista de compras com sucesso!!"
+  #   end
+  # end
 
   def index
     @compras = current_user.compras
@@ -43,8 +55,6 @@ class ComprasController < ApplicationController
     @compra = Compra.new(params[:compra])
 
     @compra.users << current_user
-
-    #@compra.users << User.last
 
     respond_to do |format|
       if @compra.save

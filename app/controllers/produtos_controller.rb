@@ -35,7 +35,7 @@ class ProdutosController < ApplicationController
     @produto.save
 
     if @produto.save
-      redirect_to compra_produtos_path(@compra)
+      redirect_to compra_produtos_path(@compra), notice: 'Produto cadastrado com sucesso!!'
     else
       render :action => "new"
     end
@@ -46,7 +46,7 @@ class ProdutosController < ApplicationController
 
     respond_to do |format|
       if @produto.update_attributes(params[:produto])
-        format.html { redirect_to compra_produtos_path(@compra), notice: 'Produto was successfully updated.' }
+        format.html { redirect_to compra_produtos_path(@compra), notice: 'Produto atualizado com sucesso!!' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

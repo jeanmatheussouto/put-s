@@ -1,4 +1,5 @@
-<h3>Editando o produto: <%= @produto.nome %></h3>
+<h3>Produto: <%= @produto.nome %></h3>
+
 <%= render 'form' %>
 
-<%= link_to 'Voltar', compra_produtos_path %>
+<%= link_to 'Cancelar', compra_produtos_path, :class => "btn btn-link" %>
