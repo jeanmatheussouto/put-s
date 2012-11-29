@@ -22,11 +22,11 @@
 	}
 	a{
 		display: block;
-		height: 40px;
+		width:100%;
+		min-height: 100%;
 		background: #BF1B39;
 		text-transform: uppercase;
 		font-family: 'ubuntubold';
-		padding-top: 30px;
 		-webkit-transition: all .5s linear;
 		   -moz-transition: all .5s linear;
 		    -ms-transition: all .5s linear;

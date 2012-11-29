@@ -28,6 +28,10 @@
   <label class="control-label" for="status">Comprado?</label>
   <div class="controls">
     <%= f.check_box :status %>
+    <select name="[status]" id="status">
+      <option value="true">Comprado</option>
+      <option value="false">Ainda não</option>
+    </select>
   </div>
 </div>
 

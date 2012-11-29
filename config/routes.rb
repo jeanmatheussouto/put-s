@@ -1,13 +1,11 @@
 Puts::Application.routes.draw do
   get "home/index"
 
-  #get "home/envia_feedback", :controller => "home", :action => "envia_feedback"
-
   root :to => 'home#index'
 
   devise_for :users
 
-  post 'home/enviar_feedback'
+  #post 'home/enviar_feedback'
 
   resources :compras do
     resources :produtos
