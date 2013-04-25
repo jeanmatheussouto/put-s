@@ -1,10 +1,12 @@
-<hr>
-	
-<h3>Listas de Compras</h3>
+<h4>Listas de Compras</h4>
 <ul class="lista_compras">
 	<% ultimas_compras.each do |compra| %>
 	<li><i class="icon-shopping-cart"></i><%= link_to compra.nome , compra_produtos_path(compra) %></li>
 	<%end%>
+</ul>
+<h4>Compartilhadas Comigo</h4>
+<ul>
+	<li>Lista Compartilhada</li>
 </ul>
 
 <hr>

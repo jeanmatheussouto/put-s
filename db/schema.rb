@@ -28,11 +28,11 @@ ActiveRecord::Schema.define(:version => 20121125030653) do
   create_table "produtos", :force => true do |t|
     t.string   "nome"
     t.text     "descricao"
-    t.decimal  "quantidade"
+    t.decimal  "quantidade", :precision => 10, :scale => 0
     t.boolean  "status"
     t.integer  "compra_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                                :null => false
+    t.datetime "updated_at",                                :null => false
   end
 
   create_table "users", :force => true do |t|
