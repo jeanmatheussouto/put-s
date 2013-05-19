@@ -52,7 +52,7 @@ Devise.setup do |config|
   # It can be set to an array that will enable http authentication only for the
   # given strategies, for example, `config.http_authenticatable = [:token]` will
   # enable it only for token authentication.
-  # config.http_authenticatable = false
+  config.http_authenticatable = true
 
   # If http headers should be returned for AJAX requests. True by default.
   # config.http_authenticatable_on_xhr = true
@@ -172,7 +172,7 @@ Devise.setup do |config|
 
   # ==> Configuration for :token_authenticatable
   # Defines name of the authentication token params key
-  # config.token_authentication_key = :auth_token
+  config.token_authentication_key = :auth_token
 
   # ==> Scopes configuration
   # Turn scoped views on. Before rendering "sessions/new", it will first check for
@@ -229,4 +229,21 @@ Devise.setup do |config|
   # When using omniauth, Devise cannot automatically set Omniauth path,
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = "/my_engine/users/auth"
+  require 'devise/strategies/token_authenticatable'
+  module Devise
+    module Strategies
+      class TokenAuthenticatable < Authenticatable
+        def params_auth_hash
+          return_params = if params[scope].kind_of?(Hash) && params[scope].has_key?(authentication_keys.first)
+            params[scope]
+          else
+            params
+          end
+          token = ActionController::HttpAuthentication::Token.token_and_options(request)
+          return_params.merge!(:auth_token => token[0]) if token
+          return_params
+        end
+      end
+    end
+  end
 end

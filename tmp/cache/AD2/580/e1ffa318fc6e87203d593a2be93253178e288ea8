@@ -1,4 +1,4 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1354158643.6833587:@value"ê[I"ÜjQuery(document).ready(function() {
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1368837808.5609732:@value"ê[I"ÜjQuery(document).ready(function() {
 	//$('.typeahead').typeahead();
 
 	//add class para os fields com erros
@@ -34,4 +34,4 @@
 
 });
 
-:EF
+:ET

@@ -1,6 +1,6 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1354134595.7315857:@value"}[I"q/* line 1, ../../app/assets/stylesheets/produtos.css.scss */
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1368837808.012054:@value"}[I"q/* line 1, ../../app/assets/stylesheets/produtos.css.scss */
 .span_red {
   float: none;
   color: #BF1B39;
 }
-:EF
+:ET

@@ -21,23 +21,11 @@ class ComprasController < ApplicationController
     end
   end
 
-  # #Action  que excluir o participante da lista
-  # def remove_participante
-  #   @compra = Compra.find(params[:compra_id])
-
-  #   if params[:user_id]
-  #     user_id = params[:user_id]
-
-  #     @compra.users.destroy(user_id)
-
-  #     redirect_to compra_produtos_path(@compra), notice: "Participante removido da sua lista de compras com sucesso!!"
-  #   end
-  # end
-
   def index
     @compras = current_user.compras
 
     respond_with @compras
+
   end
 
   def show
@@ -61,10 +49,24 @@ class ComprasController < ApplicationController
     respond_to do |format|
       if @compra.save
         format.html { redirect_to compra_produtos_path(@compra), notice: 'Compra cadastrada com sucesso!!' }
-        format.json { render json: compra_produtos_path(@compra), status: :created, location: @compra }
+        format.json { 
+          #render json: compra_produtos_path(@compra), status: :created, location: @compra 
+          render :status => 200,
+           :json => { :success => true,
+                      :info => "Lista de Compras criada com Sucesso.",
+                      :data => { :compra => @compra }
+                    }
+        }
+
       else
         format.html { render action: "new" }
-        format.json { render json: @compra.errors, status: :unprocessable_entity }
+        format.json { 
+          #render json: @compra.errors, status: :unprocessable_entity
+          render :status => :unprocessable_entity,
+             :json => { :success => false,
+                        :info => @compra.errors,
+                        :data => {} }
+        }
       end
     end
   end

@@ -1,4 +1,4 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1353857516.905698:@value"@[I"2/* Default class modification */
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1368837808.4967139:@value"@[I"2/* Default class modification */
 
 $.extend( $.fn.dataTableExt.oStdClasses, {
 	"sWrapper": "dataTables_wrapper form-inline"
@@ -94,4 +94,4 @@ $.extend( $.fn.dataTableExt.oPagination, {
 		}
 	}
 } );
-:EF
+:ET

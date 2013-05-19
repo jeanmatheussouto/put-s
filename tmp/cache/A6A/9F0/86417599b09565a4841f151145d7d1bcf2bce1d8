@@ -1,4 +1,4 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1354135697.8967137:@value")[I"/* line 1, ../../app/assets/stylesheets/compras.css.scss */
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1368837807.983281:@value")[I"/* line 1, ../../app/assets/stylesheets/compras.css.scss */
 #eng_content {
   min-height: 730px;
 }
@@ -54,4 +54,4 @@
   height: 30px;
   margin: 10px 0;
 }
-:EF
+:ET

@@ -12,6 +12,17 @@ Puts::Application.routes.draw do
     post 'convidar'
   end
 
+  namespace :api do
+    namespace :v1 do
+      devise_scope :user do
+        post 'registrations' => 'registrations#create', :as => 'register'
+        post 'sessions' => 'sessions#create', :as => 'login'
+        delete 'sessions' => 'sessions#destroy', :as => 'logout'
+      end
+    end
+  end
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

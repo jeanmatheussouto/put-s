@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
 gem 'devise'
+gem 'rabl'
 
 group :assets do
   gem 'jquery-rails'
