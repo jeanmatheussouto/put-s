@@ -6,7 +6,7 @@ class Api::V1::RegistrationsController < Devise::RegistrationsController
 
   def create
     build_resource
-    resource.skip_confirmation!
+    #resource.skip_confirmation!
     if resource.save
       sign_in resource
       render :status => 200,
