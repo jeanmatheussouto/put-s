@@ -1,6 +1,6 @@
 class ProdutosController < ApplicationController
 
-  
+
   before_filter :authenticate_user!
   
   #buscando a compra selecionada
@@ -35,10 +35,25 @@ class ProdutosController < ApplicationController
     @produto = @compra.produtos.build(params[:produto])
     @produto.save
 
-    if @produto.save
-      redirect_to compra_produtos_path(@compra), notice: 'Produto cadastrado com sucesso!!'
-    else
-      render :action => "new"
+    respond_to do |format|
+      if @produto.save
+        format.html { redirect_to compra_produtos_path(@compra), notice: 'Produto cadastrado com sucesso!!' }
+        format.json {
+          render :status => 200,
+           :json => { :success => true,
+                      :info => "Produto adicionado com sucesso!",
+                      :data => { :produto => @produto }
+                    }
+        }
+      else
+        format.html { render :action => "new" }
+        format.json {
+          render :status => :unprocessable_entity,
+             :json => { :success => false,
+                        :info => @produto.errors,
+                        :data => {} }
+        }
+      end
     end
   end
 
