@@ -1,4 +1,4 @@
 .DS_Store
 
 # Ignorar todos os diretórios e arquivos em um diretório.
-tmp/**/*
+/tmp/**/*
