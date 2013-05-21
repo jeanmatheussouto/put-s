@@ -13,7 +13,7 @@
     </tr>
 
   </thead>
-  
+
   <tbody>
     <% @produtos.each do |produto| %>
     <tr>
@@ -29,7 +29,9 @@
       <td>
         <a href="#<%= produto.class %><%= produto.id%>" data-toggle="modal">Detalhes</a>
         <%= link_to 'Editar', edit_compra_produto_path(@compra,produto), :class => "btn btn-link"%>
-        <%= link_to 'Excluir', compra_produto_path(@compra, produto), method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-link"%>
+        <%= link_to 'Excluir', compra_produto_path(@compra, produto), method: :delete, data: { confirm: 'Deseja excluir?' }, :class => "btn btn-link"%>
+        <%=hidden_field_tag 'produto[status]', '0'%>
+        <%=check_box_tag 'produto[status]', 1, (produto.status == 1 ? true : false)%>
       </td>
     </tr>
 

@@ -8,8 +8,17 @@ Puts::Application.routes.draw do
   #post 'home/enviar_feedback'
 
   resources :compras do
-    resources :produtos
+    resources :produtos do
+      put 'nao_comprado' => 'produtos#nao_comprado', :as => 'produto_nao_comprado'
+      put 'comprado' => 'produtos#comprado', :as => 'produto_comprado'
+    end
     post 'convidar'
+  end
+
+
+  resources :produtos do
+      put 'nao_comprado' => 'produtos#nao_comprado', :as => 'produto_nao_comprado'
+      put 'comprado' => 'produtos#comprado', :as => 'produto_comprado'
   end
 
   namespace :api do

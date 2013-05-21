@@ -2,7 +2,7 @@ class ProdutosController < ApplicationController
 
 
   before_filter :authenticate_user!
-  
+
   #buscando a compra selecionada
   before_filter :find_compra
 
@@ -21,7 +21,7 @@ class ProdutosController < ApplicationController
   end
 
   def new
-    @produto = @compra.produtos.build 
+    @produto = @compra.produtos.build
 
     respond_with @produto
 
@@ -79,6 +79,29 @@ class ProdutosController < ApplicationController
       format.html { redirect_to compra_produtos_path(@compra) }
       format.json { head :no_content }
     end
+  end
+
+  # processa as requisiçoes para alterar o status do produto
+  def nao_comprado
+    @produto = @compra.produtos.find(params[:produto_id])
+    @produto.nao_comprado!
+
+    rescue ActiveRecord::RecordNotFound
+      render  :status => 404,
+              :json => { :success => false,
+              :info => 'Not Found',
+              :data => {} }
+  end
+
+  def comprado
+    @produto = @compra.produtos.find(params[:produto_id])
+    @produto.comprado!
+
+    rescue ActiveRecord::RecordNotFound
+      render  :status => 404,
+              :json => { :success => false,
+              :info => 'Not Found',
+              :data => {} }
   end
 
   private
