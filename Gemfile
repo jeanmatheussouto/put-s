@@ -4,6 +4,9 @@ gem 'rails', '3.2.13'
 gem 'devise'
 gem 'rabl'
 
+gem 'omniauth'
+gem 'omniauth-facebook'
+
 group :assets do
   gem 'jquery-rails'
   gem 'sass-rails',   '~> 3.2.3'
