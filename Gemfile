@@ -6,6 +6,7 @@ gem 'rabl'
 
 gem 'omniauth'
 gem 'omniauth-facebook'
+gem 'omniauth-google-oauth2'
 
 group :assets do
   gem 'jquery-rails'
