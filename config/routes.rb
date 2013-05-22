@@ -3,7 +3,7 @@ Puts::Application.routes.draw do
 
   root :to => 'home#index'
 
-  devise_for :users
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
   #post 'home/enviar_feedback'
 
@@ -30,10 +30,6 @@ Puts::Application.routes.draw do
       end
     end
   end
-
-  match 'auth/:provider/callback', to: 'sessions#create'
-  match 'auth/failure', to: redirect('/')
-  match 'signout', to: 'sessions#destroy', as: 'signout'
 
 
   # The priority is based upon order of creation:
