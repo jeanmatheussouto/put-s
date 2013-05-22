@@ -31,6 +31,10 @@ Puts::Application.routes.draw do
     end
   end
 
+  match 'auth/:provider/callback', to: 'sessions#create'
+  match 'auth/failure', to: redirect('/')
+  match 'signout', to: 'sessions#destroy', as: 'signout'
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
