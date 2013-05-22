@@ -1,5 +1,0 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1354101592.117412:@value"w[I"k/* line 1, ../../app/assets/stylesheets/produtos.css.scss */
-.tit_compra, .resp {
-  color: #BF1B39;
-}
-:EF
