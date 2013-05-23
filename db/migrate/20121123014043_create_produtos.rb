@@ -5,7 +5,6 @@ class CreateProdutos < ActiveRecord::Migration
       t.text :descricao
       t.decimal :quantidade
       t.boolean :status
-      
       t.integer :compra_id
 
 

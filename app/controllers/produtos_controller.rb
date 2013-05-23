@@ -33,6 +33,9 @@ class ProdutosController < ApplicationController
 
   def create
     @produto = @compra.produtos.build(params[:produto])
+    if @produto.status == nil
+      @produto.status = false
+    end
     @produto.save
 
     respond_to do |format|

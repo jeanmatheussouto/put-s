@@ -29,12 +29,10 @@ module ApplicationHelper
 		modal += "<button type='button' class='close' data-dismiss='modal' aria-hidden='true'>&times;</button>"
 		modal += "<h3>#{model.class} - #{model.nome}</h3>"
 		modal += '</div>'
-		
 		modal += "<div class='modal-body'>"
 		modal += "<p><b>Nome:</b>#{model.nome}</p>"
 		modal += "<p><b>Descricao:</b>#{model.descricao}</p>"
 		modal += "</div>"
-		
 		modal += "</div>"
 
 		raw modal
@@ -47,19 +45,14 @@ module ApplicationHelper
 		modal += "<button type='button' class='close' data-dismiss='modal' aria-hidden='true'>&times;</button>"
 		modal += "<h3>CHECK LIST</h3>"
 		modal += '</div>'
-		
 		modal += "<div class='modal-body'>"
 		modal += "<ul class='checklist'>"
-		
 		model.produtos.each do |p|
-			modal += "<li><input type='checkbox'/>#{p.nome}</li>"	
+			modal += "<li><input type='checkbox'/>#{p.nome}</li>"
 		end
-		
 		modal += "</ul>"
 
-		
 		modal += "</div>"
-		
 		modal += "</div>"
 
 		raw modal
