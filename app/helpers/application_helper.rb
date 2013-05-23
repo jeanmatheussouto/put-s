@@ -6,20 +6,39 @@ module ApplicationHelper
 			erros += "<h4>#{pluralize(model.errors.count, "erro")}, encontrados:</h4>"
 			erros += "<hr>"
 			erros += "<ul>"
-			
 			model.errors.full_messages.each do |msg|
 				erros += "<li> #{msg}</li>"
 			end
 
 			erros += "</ul> </div>"
 		end
-		raw erros  
+		raw erros
 	end
 
 	#Helper para busca as ultimas 10 compras
 	#para alimentar a sidebar
 	def ultimas_compras
-		return current_user.compras.limit(10).order("created_at DESC")
+		resu = []
+		lista = current_user.compras.limit(10).order("created_at DESC")
+
+		lista.each do |compra|
+			if(compra.users.first == current_user)
+				resu << compra
+			end
+		end
+		resu
+	end
+
+	#Busca as compras compartilhadas comigo
+	def compras_compartilhadas
+		lista = current_user.compras.order("created_at DESC")
+		resu = []
+		lista.each do |compra|
+			if(compra.users.first != current_user)
+				resu << compra
+			end
+		end
+		resu
 	end
 
 	#helper para gerar uma modal para o show de uma compra

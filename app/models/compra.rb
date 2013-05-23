@@ -10,4 +10,14 @@ class Compra < ActiveRecord::Base
   has_many :produtos
 
   validates :nome, :presence => true, :length => { :minimum => 3 }
+
+  def verifica_usuario_compra(user)
+  	user = Compra.users.find(user.id)
+  	if user?
+  		verifica = true
+  	else
+  		verifica = false
+  	end
+  	verifica
+  end
 end

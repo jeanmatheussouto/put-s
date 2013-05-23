@@ -6,7 +6,9 @@
 </ul>
 <h4>Compartilhadas Comigo</h4>
 <ul>
-	<li>Lista Compartilhada</li>
+	<% compras_compartilhadas.each do |compra| %>
+		<li><i class="icon-shopping-cart"></i><%= link_to compra.nome , compra_produtos_path(compra) %></li>
+	<%end%>
 </ul>
 
 <hr>
