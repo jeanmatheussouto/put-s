@@ -16,9 +16,12 @@ ActiveRecord::Schema.define(:version => 20130522145722) do
   create_table "compras", :force => true do |t|
     t.string   "nome"
     t.text     "descricao"
+    t.string   "slug"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  add_index "compras", ["slug"], :name => "index_compras_on_slug", :unique => true
 
   create_table "compras_users", :id => false, :force => true do |t|
     t.integer "compra_id"
@@ -31,9 +34,12 @@ ActiveRecord::Schema.define(:version => 20130522145722) do
     t.decimal  "quantidade", :precision => 10, :scale => 0
     t.boolean  "status"
     t.integer  "compra_id"
+    t.string   "slug"
     t.datetime "created_at",                                :null => false
     t.datetime "updated_at",                                :null => false
   end
+
+  add_index "produtos", ["slug"], :name => "index_produtos_on_slug", :unique => true
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false

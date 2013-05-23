@@ -1,6 +1,5 @@
 class ProdutosController < ApplicationController
 
-
   before_filter :authenticate_user!
 
   #buscando a compra selecionada

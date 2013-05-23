@@ -8,6 +8,8 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
 
+gem 'friendly_id'
+
 group :assets do
   gem 'jquery-rails'
   gem 'sass-rails',   '~> 3.2.3'

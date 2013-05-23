@@ -61,7 +61,7 @@ module ApplicationHelper
 	def getsource
     	array = []
     	User.all.each do |u|
-    		array << u.nome 
+    		array << "#{u.nome} - #{u.email}"
     	end
     	return array.to_json
   	end

@@ -1,6 +1,9 @@
 class Produto < ActiveRecord::Base
   attr_accessible :descricao, :nome, :quantidade, :status, :compra_id
 
+  extend FriendlyId
+  friendly_id :nome, use: :slugged
+
   #produto tem uma compra
   belongs_to :compra
 

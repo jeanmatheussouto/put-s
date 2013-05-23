@@ -6,9 +6,11 @@ class CreateProdutos < ActiveRecord::Migration
       t.decimal :quantidade
       t.boolean :status
       t.integer :compra_id
-
+      t.string :slug
 
       t.timestamps
     end
+
+    add_index :produtos, :slug, unique: true
   end
 end
