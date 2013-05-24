@@ -1,9 +1,9 @@
 <!-- Modal Sign up -->
-<div id="sign" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div id="sign" class="modal hide fade modal_login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    <h3 id="myModalLabel">Sign Up</h3>
+    <h3 id="myModalLabel">Registre-se</h3>
   </div>
   
   <div class="modal-body"> 
@@ -25,30 +25,26 @@
     </div>
 
     <div class="control-group">
-      <label class="control-label" for="inputPassword">Password</label>
+      <label class="control-label" for="inputPassword">Senha</label>
       <div class="controls">
         <%= f.password_field :password, :class => "input-xlarge" %>
       </div>
     </div>
 
     <div class="control-group">
-      <label class="control-label" for="inputPassword">Re-Password</label>
+      <label class="control-label" for="inputPassword">Senha Novamente</label>
       <div class="controls">
         <%= f.password_field :password_confirmation, :class => "input-xlarge" %>
       </div>
     </div>
 
     <div class="control-group">
-      <div class="controls">
-        <%= f.submit 'Sign up', :class => "btn btn-success btn-large" %>
+      <div class="controls pull-right">
+        <button class="btn btn-link" data-dismiss="modal" aria-hidden="true">Cancelar</button>
+        <%= f.submit 'Registrar', :class => "btn btn-success btn-medium" %>
       </div>
     </div>
     <% end %>
   </div>
-
-  <div class="modal-footer">
-    <button class="btn" data-dismiss="modal" aria-hidden="true">Cancelar</button>
-  </div>
-
 </div>
 <!-- end modal sign up -->

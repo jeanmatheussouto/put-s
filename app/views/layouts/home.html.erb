@@ -20,7 +20,7 @@
 
             <!-- NAVBAR -->
             <% if user_signed_in? %>
-            <div class="navbar navbar-fixed-top">
+            <div class="navbar navbar-fixed-top navbar-inverse">
              <div class="navbar-inner">
               <div class="container">
                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -28,7 +28,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </a>
-              <%= link_to "put'S", root_path, :class => "brand" %>
+              <%= link_to "put'S", root_path, :class => "brand title_navbar" %>
               <div class="nav-collapse collapse">
                 <ul class="nav">
                   <li><%= link_to "Meu put'S", compras_path %></li>
@@ -44,7 +44,7 @@
          </div>.
        </div>
        <% else %>
-       <div class="navbar navbar-fixed-top">
+       <div class="navbar navbar-fixed-top navbar-inverse">
         <div class="navbar-inner">
           <div class="container">
             <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -52,13 +52,11 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </a>
-            <%= link_to "put'S", root_path, :class => "brand" %>
+            <%= link_to "put'S", root_path, :class => "brand title_navbar" %>
             <div class="nav-collapse collapse">
              <ul class="nav">
                <li><a href="#feedback" data-toggle="modal">Mande seu feedback</a></li>
                <li><a href="#sobre" data-toggle="modal">Sobre</a></li>
-               <li><%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %></li>
-               <li><%= link_to "Sign in with Google", user_omniauth_authorize_path(:google_oauth2) %></li>
              </ul>
              <ul class="nav pull-right">
                <li><a href="#login" data-toggle="modal">Login</a></li>
@@ -91,19 +89,13 @@
      <div>
       <div class="topo">
         <div class="container">
-          <div class="row">
-            <div class="span2" id="header_puts">
-              <h1>put'S</h1>
-              <a href="#sign" data-toggle="modal" class="btn btn-primary btn-large">Criar uma conta</a>
-            </div>
-
-            <div class="span8 pull-right">
-              <ul class="thumbnails" id="header_puts_imgs">
-                <li class="span8">
-
-               </li>
-             </ul>
-           </div>
+          <div class="row offset1">
+            <ul class="eng_login">
+              <li><a href="#login" data-toggle="modal" class="btn_login_social span4 btn_social_puts">Login com sua conta</a></li>
+              <li><%= link_to "Login com o Facebook", user_omniauth_authorize_path(:facebook), :class => 'span4 btn_login_social btn_social_facebook' %></li>
+              <li><a href="#sign" data-toggle="modal" class="btn_login_social span4 btn_social_puts">Criar uma conta</a></li>
+              <li><%= link_to "Login com o Google", user_omniauth_authorize_path(:google_oauth2), :class => 'span4 btn_login_social btn_social_google' %></li>
+            </ul>
          </div>
        </div>
      </div>

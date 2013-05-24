@@ -22,25 +22,39 @@
 	}
 	a{
 		display: block;
-		width:100%;
-		min-height: 100%;
 		background: #BF1B39;
 		text-transform: uppercase;
 		font-family: 'ubuntubold';
-		-webkit-transition: all .5s linear;
-		   -moz-transition: all .5s linear;
-		    -ms-transition: all .5s linear;
-		     -o-transition: all .5s linear;
-		        transition: all .5s linear;
-		
-	}
-	a:hover{
-		background: #FFF;
-		color: #000;
 	}
 }
-#header_puts_imgs{
-	margin-top: 80px;
+.title_navbar{
+	font-family: 'ubuntubold';
+	font-size:20px;
+	color:#FFF !important;
+}
+.eng_login{
+	padding-top: 30px;
+}
+.modal_login{
+	width: 400px !important;
+}
+.btn_login_social, .eng_login{
+	height: 5em;
+	margin:1em;
+	line-height:5em;
+	text-align:center;
+	font-family: 'ubuntubold';
+	font-size:20px;
+	color:#FFF !important;
+}
+.btn_social_facebook{
+	background-color: #3B5998;
+}
+.btn_social_google{
+	background-color: #D14836;
+}
+.btn_social_puts{
+	background-color: #de0c39;
 }
 #box_puts{
 	div{
