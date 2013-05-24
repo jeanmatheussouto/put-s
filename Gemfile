@@ -19,7 +19,6 @@ group :assets do
   gem 'twitter-bootstrap-rails'
   gem 'less-rails'
   gem 'jqtools-rails'
-  gem 'jquery-datatables-rails'
 end
 
 group :development do

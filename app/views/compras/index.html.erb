@@ -1,11 +1,13 @@
-<h3>Minhas listas de compras</h3>
+<h4>Minhas listas de compras</h4>
+<hr>
+<% if @compras.size > 0 %>
 
 <table class="table table-bordered table-striped datatable">
   <thead>
     <tr>
       <th>Nome</th>
       <th></th>
-    </tr>  
+    </tr>
   </thead>
   
   <tbody>
@@ -22,7 +24,14 @@
     <% end %>
   </tbody>
 </table>
+<% else %>
+  <div class="alert alert-info">
+    <strong>Bem Vindo!</strong> Você ainda não possui lista de compras. Crie sua primeira lista <strong><%= link_to 'aqui', new_compra_path %>.</strong>
+  </div>
+<% end %>
 
 <div class="clear"></div>
 <br><br>
+<% if @compras.size > 0 %>
 <%= link_to 'Nova lista de compra', new_compra_path, :class => "btn btn-success pull-right" %>
+<% end %>
