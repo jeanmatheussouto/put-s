@@ -1,13 +1,83 @@
-// body{
-// 	background: image_url("cloud3.jpg") top left no-repeat;
-// }
-// .content{
-// 	background: image_url("bg_content.jpg") top left repeat;
-// }
+//hover menu
+.nav li a:hover{
+	background-color: #26bdff !important;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	-o-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+}
 .topo {
-	height: 384px;
-	margin: 60px 0 100px 0;
 	background:#232323;
+	color: #fff;
+	font-size:14px;
+}
+.topo  > div{
+	padding:40px;
+}
+.topo input{
+	padding: 10px;
+	border-radius:2px !important;
+}
+.input_sign{
+	width:80%;
+	padding:10px;
+}.google{
+	background: image_url("google.png") #DA3B35 left center no-repeat !important ;
+}
+.facebook{
+	background: image_url("face.png") rgb(60, 90, 152) left center no-repeat !important ;
+}
+.auth-button:hover{
+	cursor:pointer;
+	text-decoration:none !important;
+	color:#fff;
+}
+.text{
+	text-align:center;
+	width:100%;
+	display:block;
+}
+.auth-button{
+	-webkit-background-clip: border-box;
+	-webkit-background-origin: padding-box;
+	-webkit-background-size: auto;
+	-webkit-transition-delay: 0s;
+	-webkit-transition-duration: 0.2s;
+	-webkit-transition-property: background;
+	-webkit-transition-timing-function: ease;
+	background-attachment: scroll;
+	background-clip: border-box;
+	background-image: none;
+	background-origin: padding-box;
+	background-size: auto;
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	box-sizing: border-box;
+	color: rgb(255, 255, 255);
+	cursor: auto;
+	display: block;
+	font-family: Lato, sans-serif;
+	font-size: 17px;
+	height: 60px;
+	margin-bottom: 35px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 55px;
+	padding-bottom: 15px;
+	padding-left: 70px;
+	padding-right: 10px;
+	padding-top: 15px;
+	text-align: left;
+	text-decoration: none;
+	transition-delay: 0s;
+	transition-duration: 0.2s;
+	transition-property: background;
+	transition-timing-function: ease;
 }
 #header_puts{
 	margin-top: 100px;
@@ -57,6 +127,7 @@
 	background-color: #de0c39;
 }
 #box_puts{
+	margin-top:30px;
 	div{
 		margin-bottom: 50px;
 		text-align: center;
