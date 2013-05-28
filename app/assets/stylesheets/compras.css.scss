@@ -9,19 +9,23 @@
 	}
 	input{
 		float:left;
-		 font-size: 11px;
-        background-color: #FFFFFF;
-        padding: 1px;
-        color: #595224;
-        margin: 0px;
-        border: 1px solid #cac5a3;
-        height: 18px;
+   font-size: 11px;
+   background-color: #FFFFFF;
+   padding: 1px;
+   color: #595224;
+   margin: 0px;
+   border: 1px solid #cac5a3;
+   height: 18px;
 
-	}
+ }
 }
 .lista_compras{
+  margin-left: 0 !important;
   i{
-    padding-right: 10px;
+    padding-right: 2px;
+  }
+  li{
+    height: 2em;
   }
 }
 .btn-mais{
@@ -32,4 +36,40 @@
 #select_user{
   height:30px;
   margin: 10px 0;
+}
+.badge-compras{
+  float: right;
+  position: relative;
+  top: 3px;
+  margin-left: 3px;
+}
+/*folha de papel*/
+.paper {
+  background: url("//d243c77n3ntbbv.cloudfront.net/static/img/paper/paper_vertical.gif?31321c4d15f3") repeat-y scroll 13px 0px,
+              url("//d243c77n3ntbbv.cloudfront.net/static/img/paper/paper_top.gif?31321c4d15f3") repeat-x scroll 0 0px,
+              url("//d243c77n3ntbbv.cloudfront.net/static/img/paper/paper_horizontal.gif?31321c4d15f3") repeat scroll 0 39px #FFFFFF;
+  border: 1px solid #DDDDDD;
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.1);
+  color: #666666;
+  min-height: 80px;
+  padding: 14px 29px 16px;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 10px;
+}
+.eng_paper .date {
+    background: url("//d243c77n3ntbbv.cloudfront.net/static/img/bg_date_record.png?31321c4d15f3") no-repeat scroll 15px 15px #FFFFFF;
+    border: 7px solid #14A7DC;
+    border-radius: 35px 35px 35px 35px;
+    color: #14A7DC;
+    height: 14px;
+    line-height: 14px;
+    padding: 24px 17px 18px;
+    width: 22px;
+}
+.eng_paper .date span {
+    display: block;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
 }

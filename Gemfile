@@ -10,6 +10,8 @@ gem 'omniauth-google-oauth2'
 
 gem 'friendly_id'
 
+gem 'brazilian-rails'
+
 group :assets do
   gem 'jquery-rails'
   gem 'sass-rails',   '~> 3.2.3'

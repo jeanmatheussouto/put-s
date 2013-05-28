@@ -1,5 +1,5 @@
 class Compra < ActiveRecord::Base
-	attr_accessible :descricao, :nome, :user_id
+	attr_accessible :descricao, :nome, :user_id, :created_at
 
 	extend FriendlyId
 	friendly_id :nome, use: :slugged
@@ -19,5 +19,9 @@ class Compra < ActiveRecord::Base
   		verifica = false
   	end
   	verifica
+  end
+
+  def get_produtos_comprados(compra, status)
+    comprados = compra.produtos.where(:status => status).size
   end
 end

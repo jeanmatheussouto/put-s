@@ -2,3 +2,17 @@
 	float: none;
 	color: #BF1B39;
 }
+.lista_produtos_paper{
+	margin-top: 5px;
+	li{
+		float: left;
+		margin-right: 10px;
+		a{
+			text-decoration: none;
+			color: #232323;
+		}
+	}
+	.produto_comprado{
+		text-decoration:line-through;
+	}
+}

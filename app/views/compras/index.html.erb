@@ -1,32 +1,29 @@
 <h4>Minhas listas de compras</h4>
 <hr>
 <% if @compras.size > 0 %>
-
-<table class="table table-bordered table-striped datatable">
-  <thead>
-    <tr>
-      <th>Nome</th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @compras.each do |compra| %>
-    <tr>
-      <td><%= link_to compra.nome, compra_produtos_path(compra) %></td>
-      <td style="text-align:center">
-        <%= link_to 'Editar', edit_compra_path(compra), :class => "btn btn-link"%>
-        <%= link_to 'Excluir', compra, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-link"%>
-        <%= link_to "Convidar", compra_convidar_path(compra), method: :post, :class => "btn btn-link"%>
-      </td>
-    </tr>
-    <% end %>
-  </tbody>
-</table>
-<% else %>
-  <div class="alert alert-info">
-    <strong>Bem Vindo!</strong> Você ainda não possui lista de compras. Crie sua primeira lista <strong><%= link_to 'aqui', new_compra_path %>.</strong>
+<% @compras.each do |compra| %>
+<div class="paper">
+  <span class="label label-info"><%= compra.created_at.to_date.to_s_br%></span>
+  <%= link_to compra.nome, compra_produtos_path(compra), :class => "btn btn-link btn-mini" %>
+  <div class="controls pull-right">
+    <%= link_to '', compra_produtos_path(compra), :class => "icon-plus-sign" %>
+    <%= link_to '', edit_compra_path(compra), :class => "icon-edit"%>
+    <%= link_to '', compra, method: :delete, data: { confirm: 'Deseja excluir está compra?' }, :class => "icon-remove"%>
+    <%= link_to '', compra_convidar_path(compra), method: :post, :class => "icon-user", :title => "Convidar"%>
+    <a href="" class="icon-print" onclick="window.print();"></a>
   </div>
+
+  <ul class="lista_produtos_paper clearfix">
+    <% compra.produtos.each do |produto| %>
+    <li class="<% if produto.status? %>produto_comprado<% end %>"><%= link_to produto.nome, edit_compra_produto_path(compra,produto) %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+<% else %>
+<div class="alert alert-info">
+  <strong>Bem Vindo!</strong> Você ainda não possui lista de compras. Crie sua primeira lista <strong><%= link_to 'aqui', new_compra_path %>.</strong>
+</div>
 <% end %>
 
 <div class="clear"></div>
