@@ -45,9 +45,9 @@
 }
 /*folha de papel*/
 .paper {
-  background: url("//d243c77n3ntbbv.cloudfront.net/static/img/paper/paper_vertical.gif?31321c4d15f3") repeat-y scroll 13px 0px,
-              url("//d243c77n3ntbbv.cloudfront.net/static/img/paper/paper_top.gif?31321c4d15f3") repeat-x scroll 0 0px,
-              url("//d243c77n3ntbbv.cloudfront.net/static/img/paper/paper_horizontal.gif?31321c4d15f3") repeat scroll 0 39px #FFFFFF;
+  background: image_url("paper_vertical.gif") repeat-y scroll 13px 0px,
+              image_url("paper_top.gif") repeat-x scroll 0 0px,
+              image_url("paper_horizontal.gif") repeat scroll 0 39px #FFFFFF;
   border: 1px solid #DDDDDD;
   box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.1);
   color: #666666;

@@ -26,6 +26,11 @@ class ComprasController < ApplicationController
     end
   end
 
+  def desfazer_convite
+    @compra = Compra.find(params[:compra_id])
+    #TODO
+  end
+
   def index
     @compras = current_user.compras
 
@@ -54,7 +59,7 @@ class ComprasController < ApplicationController
     respond_to do |format|
       if @compra.save
         format.html { redirect_to compra_produtos_path(@compra), notice: 'Compra cadastrada com sucesso!!' }
-        format.json { 
+        format.json {
           render :status => 200,
           :json => { :success => true,
             :info => "Lista de Compras criada com Sucesso.",
@@ -64,7 +69,7 @@ class ComprasController < ApplicationController
 
       else
         format.html { render action: "new" }
-        format.json { 
+        format.json {
           render :status => :unprocessable_entity,
           :json => { :success => false,
             :info => @compra.errors,
