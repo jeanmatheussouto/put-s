@@ -92,7 +92,7 @@ class ProdutosController < ApplicationController
     rescue ActiveRecord::RecordNotFound
       render  :status => 404,
               :json => { :success => false,
-              :info => 'Not Found',
+              :info => 'Nenhum registro',
               :data => {} }
   end
 
@@ -103,7 +103,7 @@ class ProdutosController < ApplicationController
     rescue ActiveRecord::RecordNotFound
       render  :status => 404,
               :json => { :success => false,
-              :info => 'Not Found',
+              :info => 'Nenhum registro',
               :data => {} }
   end
 
