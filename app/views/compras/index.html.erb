@@ -9,7 +9,7 @@
       <th></th>
     </tr>
   </thead>
-  
+
   <tbody>
     <% @compras.each do |compra| %>
     <tr>
@@ -20,7 +20,6 @@
         <%= link_to "Convidar", compra_convidar_path(compra), method: :post, :class => "btn btn-link"%>
       </td>
     </tr>
-    <%= check_list(compra) %>
     <% end %>
   </tbody>
 </table>

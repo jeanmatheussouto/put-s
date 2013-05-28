@@ -1,4 +1,4 @@
-//hover menu
+/*hover menu*/
 .nav li a:hover{
 	background-color: #26bdff !important;
 	-webkit-border-radius: 3px;
@@ -100,25 +100,6 @@
 	font-size:20px;
 	color:#FFF !important;
 }
-.btn_social_facebook{
-	background-color: #3B5998;
-}
-.btn_social_google{
-	background-color: #D14836;
-}
-.btn_social_puts{
-	background-color: #de0c39;
-}
-#box_puts{
-	margin-top:30px;
-	div{
-		margin-bottom: 50px;
-		text-align: center;
-		h2{
-			padding-bottom: 20px;
-		}
-	}
-}
 .meio {
 	height: 150px;
 	margin: 20px 0 20px 0;
@@ -134,7 +115,7 @@
 	}
 }
 footer{
-	background: #232323;
+	background: #000;
 	a{
 		color:#FFF;
 	}
