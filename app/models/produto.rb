@@ -18,4 +18,12 @@ class Produto < ActiveRecord::Base
   def comprado!
   	update_column(:status, true)
   end
+
+  def to_s
+    resu = "#{self.nome}"
+    if :quantidade?
+      resu = "#{self.nome} - #{self.quantidade}"
+    end
+    resu
+  end
 end
