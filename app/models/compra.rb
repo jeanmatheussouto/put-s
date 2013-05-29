@@ -21,8 +21,8 @@ class Compra < ActiveRecord::Base
   	verifica
   end
 
-  def get_produtos_comprados(compra, status)
-    comprados = compra.produtos.where(:status => status).size
+  def get_produtos_comprados(status)
+    comprados = self.produtos.where(:status => status).size
   end
 
   def get_valor_total_compra

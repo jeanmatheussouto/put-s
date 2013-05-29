@@ -8,8 +8,8 @@
 	<li>
 		<i class="icon-shopping-cart"></i>
 		<%= link_to compra.nome , compra_produtos_path(compra) %>
-		<span class="badge badge-success badge-compras"><%= compra.get_produtos_comprados(compra, true) %></span>
-		<span class="badge badge-important badge-compras"><%= compra.get_produtos_comprados(compra, false) %></span>
+		<span class="badge badge-success badge-compras"><%= compra.get_produtos_comprados(true) %></span>
+		<span class="badge badge-important badge-compras"><%= compra.get_produtos_comprados(false) %></span>
 	</li>
 	<%end%>
 </ul>
@@ -20,8 +20,8 @@
 		<li>
 			<i class="icon-shopping-cart"></i>
 			<%= link_to compra.nome , compra_produtos_path(compra) %>
-			<span class="badge badge-success badge-compras"><%= compra.get_produtos_comprados(compra, true) %></span>
-			<span class="badge badge-important badge-compras"><%= compra.get_produtos_comprados(compra, false) %></span>
+			<span class="badge badge-success badge-compras"><%= compra.get_produtos_comprados(true) %></span>
+			<span class="badge badge-important badge-compras"><%= compra.get_produtos_comprados(false) %></span>
 		</li>
 	<%end%>
 </ul>
