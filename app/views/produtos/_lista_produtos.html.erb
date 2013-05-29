@@ -1,0 +1,22 @@
+
+  <span>Responsável: <span class="span_red"><%= @compra.users.first.nome %></span>
+    <a href="" onclick="window.print();" class="icon-print pull-right"></a>
+  </span>
+  <ul style="margin-top: 5px;">
+    <% @produtos.each do |produto| %>
+      <li>
+        <span style="<% if produto.status? %>text-decoration:line-through;<% end %>"><%= produto.nome %></span>
+        <div class="controls pull-right offset1">
+          <%= link_to '', edit_compra_produto_path(@compra,produto), :class => "icon-edit"%>
+          <%= link_to '', compra_produto_path(@compra, produto), method: :delete, data: { confirm: 'Deseja excluir este produto?' }, :class => "icon-remove"%>
+          <% if produto.status? %>
+            <%= link_to '', compra_produto_produto_nao_comprado_path(@compra,produto),
+                      method: :put, :class => "icon-ok"%>
+          <% else %>
+            <%= link_to '', compra_produto_produto_comprado_path(@compra,produto),
+                method: :put, :class => "icon-shopping-cart"%>
+          <% end %>
+        </div>
+      </li>
+    <% end %>
+  </ul>
