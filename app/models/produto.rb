@@ -22,7 +22,7 @@ class Produto < ActiveRecord::Base
   def to_s
     resu = "#{self.nome}"
     if :quantidade?
-      resu = "#{self.nome} - #{self.quantidade}"
+      resu = "#{self.nome} : #{self.quantidade}"
     end
     resu
   end
