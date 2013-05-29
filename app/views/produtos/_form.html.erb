@@ -25,6 +25,13 @@
 </div>
 
 <div class="control-group">
+  <label class="control-label" for="quantidade">Valor Unidade</label>
+  <div class="controls">
+    <%= f.number_field :valor, :placeholder => "Valor", :class => "input-large"%>
+  </div>
+</div>
+
+<div class="control-group">
   <label class="control-label" for="status">Comprado?</label>
   <div class="controls">
     <select name="produto[status]" id="status">

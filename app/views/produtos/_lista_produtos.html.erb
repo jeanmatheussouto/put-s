@@ -1,6 +1,7 @@
 
   <span>Responsável: <span class="span_red"><%= @compra.users.first.nome %></span>
-    <a href="" onclick="window.print();" class="icon-print pull-right"></a>
+  <span class="badge badge-info pull-right">Total da compra: R$<%= @compra.get_valor_total_compra %></span>
+  <a href="" onclick="window.print();" class="icon-print pull-right" style="margin-right:10px;"></a>
   </span>
   <ul style="margin-top: 5px;">
     <% @produtos.each do |produto| %>

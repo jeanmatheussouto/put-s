@@ -1,5 +1,5 @@
 class Produto < ActiveRecord::Base
-  attr_accessible :descricao, :nome, :quantidade, :status, :compra_id
+  attr_accessible :descricao, :nome, :quantidade, :status, :compra_id, :valor
 
   extend FriendlyId
   friendly_id :nome, use: :slugged
@@ -22,7 +22,7 @@ class Produto < ActiveRecord::Base
   def to_s
     resu = "#{self.nome}"
     if :quantidade?
-      resu = "#{self.nome} : #{self.quantidade}"
+      resu = "#{self.quantidade} - #{self.nome}"
     end
     resu
   end

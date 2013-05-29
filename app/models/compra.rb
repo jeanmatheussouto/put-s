@@ -24,4 +24,18 @@ class Compra < ActiveRecord::Base
   def get_produtos_comprados(compra, status)
     comprados = compra.produtos.where(:status => status).size
   end
+
+  def get_valor_total_compra
+    total = 0.0
+    self.produtos.each do |produto|
+      if produto.valor
+        if produto.quantidade?
+          total = total + (produto.valor * produto.quantidade)
+        else
+          total += produto.valor
+        end
+      end
+    end
+    total
+  end
 end
