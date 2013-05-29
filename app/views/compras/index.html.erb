@@ -3,7 +3,7 @@
 <% if @compras.size > 0 %>
 <% @compras.each do |compra| %>
 <div class="paper">
-  <span class="label label-info"><%= compra.created_at.to_date.to_s_br%></span>
+  <span class="label label-info"><%= compra.created_at.to_date.to_s_br%> - R$<%= compra.get_valor_total_compra%></span>
   <%= link_to compra.nome, compra_produtos_path(compra), :class => "btn btn-link btn-mini" %>
   <div class="controls pull-right">
     <%= link_to '', compra_produtos_path(compra), :class => "icon-plus-sign" %>

@@ -73,3 +73,25 @@
     font-weight: bold;
     text-align: center;
 }
+
+
+
+
+@media print {
+  .navbar, footer,#sidebar, .btn,.controls{
+    display: none;
+  }
+  a{
+    font-size:14px;
+  }
+  a[href]:after {
+    content: none !important;
+  }
+  span{
+    display:inline;
+  }
+}
+
+
+
+

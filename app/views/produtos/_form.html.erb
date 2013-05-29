@@ -6,39 +6,29 @@
 <div class="control-group">
   <label class="control-label" for="nome">Nome</label>
   <div class="controls">
-    <%= f.text_field :nome, :placeholder => "Nome do produto", :class => "input-xxlarge"%>
+    <%= f.text_field :nome, :placeholder => "Nome do produto", :class => "span5"%>
   </div>
 </div>
 
-<div class="control-group">
+<div class="control-group clearfix">
+    <div class="input_lado">
+      <label class="control-label" for="nome">Quantidade</label>
+      <%= f.text_field :quantidade, :placeholder => "Quantidade", :class => "span2"%>
+    </div>
+    <div class="input_lado">
+      <label class="control-label" for="nome">Valor Unidade</label>
+      <%= f.number_field :valor, :placeholder => "Valor unidade", :class => "span2"%>
+    </div>
+    <div class="input_lado">
+      <label class="control-label" for="status">Comprado?</label>
+      <%= f.check_box :status %>
+    </div>
+</div>
+
+<div class="control-group clearfix">
   <label class="control-label" for="descricao">Descrição</label>
   <div class="controls">
-    <%= f.text_area :descricao, :placeholder => "Descrição", :class => "input-xxlarge", :rows => "6"%>
-  </div>
-</div>
-
-<div class="control-group">
-  <label class="control-label" for="quantidade">Quantidade</label>
-  <div class="controls">
-    <%= f.text_field :quantidade, :placeholder => "Quantidade", :class => "input-large"%>
-  </div>
-</div>
-
-<div class="control-group">
-  <label class="control-label" for="quantidade">Valor Unidade</label>
-  <div class="controls">
-    <%= f.number_field :valor, :placeholder => "Valor", :class => "input-large"%>
-  </div>
-</div>
-
-<div class="control-group">
-  <label class="control-label" for="status">Comprado?</label>
-  <div class="controls">
-    <select name="produto[status]" id="status">
-      <option value="">Selecione</option>
-      <option value="true">Comprado</option>
-      <option value="false">Ainda não</option>
-    </select>
+    <%= f.text_area :descricao, :placeholder => "Descrição", :class => "span5", :rows => "3"%>
   </div>
 </div>
 
