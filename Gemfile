@@ -12,6 +12,8 @@ gem 'friendly_id'
 
 gem 'brazilian-rails'
 
+gem 'newrelic_rpm'
+
 group :assets do
   gem 'jquery-rails'
   gem 'sass-rails',   '~> 3.2.3'

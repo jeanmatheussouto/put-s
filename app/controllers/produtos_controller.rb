@@ -88,13 +88,15 @@ class ProdutosController < ApplicationController
   def nao_comprado
     @produto = @compra.produtos.find(params[:produto_id])
 
-    respond_to do |format|
-      if @produto.nao_comprado!
-        format.html { redirect_to compra_produtos_path(@compra), alert: 'Produto NÃO COMPRADO !!' }
-      else
-        format.html { render action: "edit" }
-      end
-    end
+    @produto.nao_comprado!
+
+    #respond_to do |format|
+     # if @produto.nao_comprado!
+      #  format.html { redirect_to compra_produtos_path(@compra), alert: 'Produto NÃO COMPRADO !!' }
+      #else
+      #  format.html { render action: "edit" }
+      #end
+    #end
 
     rescue ActiveRecord::RecordNotFound
       render  :status => 404,
@@ -107,13 +109,15 @@ class ProdutosController < ApplicationController
   def comprado
     @produto = @compra.produtos.find(params[:produto_id])
 
-    respond_to do |format|
-      if @produto.comprado!
-        format.html { redirect_to compra_produtos_path(@compra), notice: 'Produto COMPRADO com sucesso!!' }
-      else
-        format.html { render action: "edit" }
-      end
-    end
+    @produto.comprado!
+
+    #respond_to do |format|
+     # if @produto.comprado!
+     #   format.html { redirect_to compra_produtos_path(@compra), notice: 'Produto COMPRADO com sucesso!!' }
+     # else
+     #   format.html { render action: "edit" }
+     # end
+    #end
 
     rescue ActiveRecord::RecordNotFound
       render  :status => 404,
