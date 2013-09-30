@@ -1,0 +1,12 @@
+.span6
+	%h3 Adicionar participantes para lista de compras
+
+	= form_tag :controller => 'compras', :action => 'convidar' do
+		.control-group
+			<label class="control-label" for="nome">Procure pelo nome de seu convidado</label>
+			.controls
+				<input type="text" data-provide="typeahead" data-source='<%= getsource %>' name="[user_select]" id="select_user" class="span6">
+
+				.controls
+				<input type="submit" value="Enviar" class="btn btn-success btn-large pull-right" style="margin: 10px 23px 0 0;">
+				

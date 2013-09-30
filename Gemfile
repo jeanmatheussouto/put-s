@@ -4,6 +4,8 @@ gem 'rails', '3.2.13'
 gem 'devise'
 gem 'rabl'
 
+gem 'haml'
+
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'

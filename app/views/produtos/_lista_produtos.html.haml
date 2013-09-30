@@ -1,0 +1,21 @@
+%span Responsável:
+%span.span_red #{@compra.users.first.nome}
+
+%span.badge.badge-info.pull-right Total da compra: R$ #{@compra.get_valor_total_compra}
+%a{:href => "", :onclick => "window.print();", :class => "icon-print pull-right", :style => "margin-right:10px;"}
+
+%ul.produtos_comprados{ :style =>"margin-top: 5px;"}
+  - @produtos.each do |produto|
+    %li 
+      %span{ :style =>"<% if produto.status? %>text-decoration:line-through;"}
+      = link_to produto.to_s , edit_compra_produto_path(@compra,produto)
+
+      .controls.pull-right.offset1
+        = link_to '', edit_compra_produto_path(@compra,produto), :class => "icon-edit"
+        = link_to '', compra_produto_path(@compra, produto), method: :delete, data: { confirm: 'Deseja excluir este produto?' }, :class => "icon-remove"
+        - if produto.status?
+          = link_to '', compra_produto_produto_nao_comprado_path(@compra,produto),
+                    method: :put, :class => "icon-ok"
+        - else
+          = link_to '', compra_produto_produto_comprado_path(@compra,produto),
+              method: :put, :class => "icon-shopping-cart"

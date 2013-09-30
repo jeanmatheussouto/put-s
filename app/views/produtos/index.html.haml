@@ -1,0 +1,36 @@
+%h3 Produtos da compra : <span class="span_red">#{@compra.nome}</span>
+- if @produtos.size > 0
+  .paper.span6#div_eng_lista_produtos
+    = render 'lista_produtos',collection: @produtos
+- else
+  .alert.alert-info
+    Você ainda não possui produtos. Crie seu primeiro produto 
+    %strong>
+      = link_to 'aqui', new_compra_produto_path(@compra,@produto)
+
+.clear
+%br/
+
+= link_to 'Adicionar Produto', new_compra_produto_path(@compra,@produto), :class => "btn btn-success pull-left"
+
+.clear
+%br/ 
+%hr/
+
+%table.table.table-bordered.table-striped.datatable
+  %caption Participantes da lista de compras
+  %thead
+    %tr
+      %th Nome do participante
+  %tbody
+    - @compra.users.each do |user|
+      %tr
+        %td
+          = user.nome
+        %td
+          = user.email
+.clear
+
+= link_to "Convidar para minha lista", compra_convidar_path(@compra), method: :post, :class => "btn btn-success"
+
+

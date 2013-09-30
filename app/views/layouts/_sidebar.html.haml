@@ -1,0 +1,23 @@
+.mais.clearfix
+	%h4.pull-left Lista de Compras
+	= link_to '+', new_compra_path, :class => "btn btn-success btn-mini btn-mais pull-right"
+%hr/
+
+%ul.lista_compras.clearfix
+	- ultimas_compras.each do |compra|
+		%li 
+			%i.con-shopping-cart
+			= link_to compra.nome , compra_produtos_path(compra)
+			%span.badge.badge-success.badge-compras #{compra.get_produtos_comprados(true)}
+			%span.badge.badge-important.badge-compras #{compra.get_produtos_comprados(false)}
+
+%h4 Compartilhadas Comigo
+%hr/ 
+
+%ul.lista_compras.clearfix
+	- compras_compartilhadas.each do |compra|
+		%li
+			%i.icon-shopping-cart
+			= link_to compra.nome , compra_produtos_path(compra)
+			%span.badge.badge-success.badge-compras #{compra.get_produtos_comprados(true)}
+			%span.badge.badge-important.badge-compras #{compra.get_produtos_comprados(false)}

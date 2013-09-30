@@ -1,0 +1,14 @@
+= form_for @compra do |f|
+  = mensagens_erro(@compra)
+  .control-group
+    = f.label :nome, :class => "control-label"
+    .controls
+      = f.text_field :nome, :placeholder => "Nome da compra", :class => "input-xxlarge"
+  .control-group
+    = f.label :descricao
+    .controls
+      = f.text_area :descricao, :placeholder => "Descrição da compra", :class => "input-xxlarge"
+  .control-group
+    .controls
+      = f.submit "Salvar", :class => "btn btn-success"
+      = link_to "Cancelar", compras_path, :class => "btn btn-link"

@@ -1,0 +1,32 @@
+= form_for([@compra, @produto]) do |f|
+
+  = mensagens_erro(@produto)
+
+  .control-group
+    %label.control-label{:for=>"nome"}Nome
+ 
+  .controls
+    = f.text_field :nome, :placeholder => "Nome do produto", :class => "span5"
+
+  .control-group.clearfix
+    .input_lado
+      %label.control-label{:for=> :quantidade}Quantidade
+      = f.text_field :quantidade, :placeholder => "Quantidade", :class => "span2"
+
+    .input_lado
+      %label.control-label{:for=> :valor}Valor Unidade
+      = f.number_field :valor, :placeholder => "Valor unidade", :class => "span2"
+
+    .input_lado
+      %label.control-label{:for=> :status}Comprado?
+      = f.check_box :status
+
+  .control-group.clearfix
+    %label.control-label{:for=> :descricao}Descrição
+    .controls
+      = f.text_area :descricao, :placeholder => "Descrição", :class => "span5", :rows => "3"
+
+  .control-group
+    .controls
+      = f.submit "Salvar Produto", :class => "btn btn-success"
+      = link_to 'Cancelar', compra_produtos_path, :class => "btn btn-link"

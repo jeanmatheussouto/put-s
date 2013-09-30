@@ -1,0 +1,11 @@
+%p {:id => "notice"} #{notice}
+
+%p 
+	%b Nome:
+	= @compra.nome
+%p 
+	%b Descrição
+	= @compra.descricao
+
+= link_to 'Edit', edit_compra_path(@compra)
+= link_to 'Back', compras_path

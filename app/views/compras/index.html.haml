@@ -1,0 +1,19 @@
+%h4 Minhas listas de compras
+%hr/
+
+- if @compras.size > 0
+  - @compras.each do |compra|
+    .paper
+      %span.label.label-info #{compra.created_at.to_date.to_s_br} - R$ #{compra.get_valor_total_compra}
+      .controls.pull-right
+        = link_to '', compra_produtos_path(compra), :class => "icon-plus-sign" 
+        = link_to '', edit_compra_path(compra), :class => "icon-edit"
+        = link_to '', compra, method: :delete, data: { confirm: 'Deseja excluir está compra?' }, :class => "icon-remove"
+        = link_to '', compra_convidar_path(compra), method: :post, :class => "icon-user", :title => "Convidar"
+      %ul.lista_produtos_paper.clearfix
+        - compra.produtos.each do |produto|
+          - if produto.status
+            %li.produto_comprado
+          - else
+            %li 
+              = link_to produto.nome, edit_compra_produto_path(compra,produto)

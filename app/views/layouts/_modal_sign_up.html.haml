@@ -1,0 +1,19 @@
+= form_for("user", :url => registration_path("user")) do |f|
+  .control-group
+    %label{:for => "inputNome", :class => "control-label"} Nome
+    .controls
+      = f.text_field :nome, :class => "input_sign"
+
+  .controls-group
+    %label{:for => "inputEmail", :class => "control-label"}Email
+    .controls
+      = f.text_field :email, :class => "input_sign"
+
+  .controls-group
+    %label{:for => "inputEmail", :class => "control-label"}Senha
+    .controls
+      = f.password_field :password, :class => "input_sign"
+  
+  .control-group
+    .controls
+      = f.submit 'Registrar', :class => "btn btn-success input_sign"
